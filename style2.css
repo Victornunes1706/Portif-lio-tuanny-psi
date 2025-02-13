@@ -1,0 +1,604 @@
+/* Reset Padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+    
+    background: linear-gradient(rgba(221, 228, 225, 0.9), rgba(170, 184, 178, 0.9)), 
+    url('./Imagem-do-WhatsApp-de-2025-02-04-à_s_-00.23.03_8e05227d.png'); /* Adicione uma imagem de fundo se quiser */
+background-size: cover;
+background-position: center;
+justify-content: center;
+padding: 20px 0;
+opacity: 1;
+color:#5E6D67;
+width: 100%;
+min-height:  100vh;
+display: inline-block;
+
+
+}
+
+/*o clicar no link a página roda suavemente!*/
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+}
+
+
+/* Estilização do Cabeçalho */
+header {
+    background-color: #AAB8B2;
+    padding: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 2px solid #ffffff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+   
+}
+
+nav ol {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav ol li {
+    margin: 0 15px;
+}
+
+nav ol li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    position: relative;
+
+}
+
+nav a::after {
+    content:" ";
+    width:0%;
+    height: 3px ;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+
+}
+
+nav ol li a:hover::after {
+    width:100%;
+}
+
+/* Estilo do Menu Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
+
+/* Seções */
+section {
+    padding: 40px;
+    text-align:  center;
+
+    p{
+        box-shadow: #0b0000; 
+    }
+
+    hr{
+        border-top: 30px;
+    }
+
+    h3  {
+       font-style: oblique;
+       text-decoration: underline;
+    }
+
+    .quem-sou-container {
+        display: flex;
+        align-items: center ; /* Alinha verticalmente */
+        gap: 20px; /* Espaço entre o texto e a imagem */
+        flex-wrap: wrap; /* Permite quebra para mobile */
+      
+    }
+
+    .quem-sou-container p {
+        flex: 1;
+        font-size: 1.1em;
+        line-height: 1.6;
+        text-align: justify;
+        
+        
+        
+    }
+
+   /* Centraliza a lista no meio da página */
+.custom-list {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    
+}
+
+/* Remove a numeração e alinha os itens */
+.custom-list ol {
+    list-style: none; /* Remove números da lista */
+    padding-left: 0; /* Remove espaçamento lateral */
+    text-align: left; /* Garante alinhamento do texto */
+}
+
+/* Alinha os checkmarks com o texto */
+.custom-list li {
+    display: flex;
+    align-items: center; /* Alinha ✓ verticalmente com o texto */
+    margin-bottom: 10px; /* Adiciona espaço entre os itens */
+    font-size: 18px; /* Aumenta a legibilidade */
+}
+
+/* Estiliza o checkmark */
+.checkmark {
+    color: green; /* Define a cor do ✓ */
+    font-weight: bold;
+    margin-right: 8px; /* Espaço entre ✓ e o texto */
+}
+
+
+
+
+
+    
+    /* Ajuste para telas menores */
+    @media (max-width: 768px) {
+        .quem-sou-container {
+            flex-direction: column; /* Coloca a imagem acima do texto */
+            align-items: center; /* Centraliza no mobile */
+            text-align: center;
+        }
+    
+        .quem-sou-container img {
+            width: 80%; /* Aumenta a imagem para melhor visualização */
+            max-height: none; /* Remove a limitação de altura */
+        }
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border:none;
+      
+       
+    }
+    
+    /* Estilização do botão */
+    .pulse-button {
+        background-color: #28a745; /* Cor verde */
+        color: white;
+        font-size: px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 30px;
+        border-radius: 10px;
+        display: inline-block;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+        transition: all 0.3s ease-in-out;
+        animation: pulse 1.5s infinite ease-in-out;
+    }
+    
+    /* Efeito ao passar o mouse */
+    .pulse-button:hover {
+        background-color: #218838;
+        transform: scale(1.05);
+    }
+    
+    /* Animação de pulsação */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+        }
+        50% {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.8);
+        }
+        100% {
+            transform: scale(1);
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.6);
+        }
+    }
+    
+    /* Responsividade para telas menores */
+    @media (max-width: 600px) {
+        .pulse-button {
+            font-size: 16px;
+            padding: 12px 25px;
+        }
+    }
+
+
+  
+        
+    
+}
+
+.buttonzap{
+
+    
+   
+    .icon{
+
+        position: fixed;
+        bottom: 40px;
+        right: 30px;
+        font-size: 30px;
+        background-color: #01e675;
+        color: #ffffff;
+        border-radius: 50%;
+        padding: 3px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        z-index: 100;
+        box-shadow: 2px 2px 2px #c0bdbd;
+        display: center;
+        align-items: center;
+        justify-content: center;
+        animation: pulse 1.5s infinite;
+    }
+    
+    /* Ajuste para o ícone dentro do botão */
+    .icon  {
+        padding-top: 9px;
+        
+    }
+    
+    /* Efeito ao passar o mouse */
+    .icon:hover {
+        background-color: #ffffff;
+        color: #ffffff;
+        font-weight: 900;
+        box-shadow: 2px 2px 20px #5fe690;
+    }
+
+    
+    
+
+
+    
+    
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 30px; /* Ajuste no espaçamento */
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2); /* Efeito vidro */
+    backdrop-filter: blur(10px);
+}
+
+/* Textos */
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+
+    label{
+       
+        border-radius: 5px;
+        border-left:10px ;
+        border-right:0px ;
+        
+    }
+}
+
+p {
+    flex: 1;
+    font-size: 1.1em;
+    color: #333; /* Cor do texto */
+    line-height: 1.8; /* Espaçamento entre as linhas */
+    text-align: justify; /* Justifica os parágrafos */
+    background: rgba(255, 255, 255, 0.2); /* Fundo levemente transparente */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    
+}
+
+p {
+   
+    color: #444;
+    text-align: center;
+    margin-bottom: 15px;
+}
+p {
+    color: #333333;; /* Texto escuro para boa leitura */
+    
+}
+
+p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);  /* Sombra suave para destacar o texto */
+}
+
+
+p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideIn 1s ease-in-out forwards;
+}
+
+.paragraph-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Efeito ao Passar o Mouse nos Parágrafos */
+p:hover {
+    transition: 0.3s ease-in-out;
+    color: #ffffff; /* Verde mais escuro */
+}
+
+/* Fundo Suave para Melhor Leitura */
+.paragraph-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.main{
+    display: flex; 
+    justify-content: center;
+   flex-wrap: wrap;
+   overflow-x: auto;
+    
+}
+
+.main .card{
+    margin: 15px;
+    background-color: #65776e;
+    background-image: url();
+    background-size: cover;
+    width: 250px;
+    height: 300px;
+    border-radius:10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    
+    
+   
+     
+}
+
+.card>h4{
+    font-size: 20px;
+    padding-top: 10px;
+    
+}
+
+
+.card>img{
+    width: 35%;
+    border-top-left-radius: 10px ;
+    border-top-right-radius:10px ;
+}
+
+.card>p{
+    box-shadow: #0b0000;
+}
+/* Imagem */
+img {
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media screen and (max-width: 1020px) {
+    .container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 20px;
+    }
+
+    img {
+        max-width:100% ;
+    }
+
+    .card{
+        max-width: 100%;
+        flex-direction: column;
+        margin-bottom: 32px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        height: 200px;
+        flex: 1 0 200px;
+        height: 100px;
+        width: 200px;
+        
+    
+    }
+
+    header{
+        padding: 5px;
+
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+    .btn-contato {
+        display: block; /* Garante que a seção de contato apareça no modo mobile */
+    }
+
+
+
+}
+
+
+
+
+
+/* Botão de Agendamento */
+ul {
+    list-style-type: none;
+
+    display: flex;
+
+    position: relative;
+
+    gap: 40px;
+    justify-content: center;
+    padding:0;
+    
+}
+
+ul a .img {
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+ul li {
+
+    width:50px;
+    height: 50px;
+
+    background-color:#DDE4E1;
+    box-shadow: 0 8px 25px #00000051;
+    border-radius: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition:.2s;
+    overflow: hidden; /* Garante que o ícone não ultrapasse */
+
+
+}
+ 
+ul li:hover {
+
+    width:180px;
+}
+
+ul li span {
+    position: absolute;
+}
+
+ul li .icon {
+   
+    color: #CCC;
+    font-size: 2.2em;
+    transition: .2s;
+    justify-content: center;
+   
+}
+
+ul li .text {
+    color:#ffffff;
+    font-size: 20px;
+    transform: scale(0);
+    transition: .2s;
+    transition-delay: .1s;
+}
+
+ul li:hover .text {
+    
+     transform: scale(1);
+}
+
+ul li:hover .icon {
+
+    transform: scale(1.1);
+
+}
+
+ul li::before {
+
+    content: '';
+    position:absolute;
+    background-image: linear-gradient(45deg, Var(--cor1), Var(--cor2))  ;
+    inset: 0;
+    opacity: 0;
+    border-radius: 60px;
+}
+
+ul li:hover::before{
+    opacity: 1;
+}
+
+ 
+/* Rodapé */
+footer {
+    background-color:var(#AAB8B2);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px ;
+}
+
+/* Tornando o site responsivo, para mobile tb!*/
+
+@media screen and (max-width: 1020px){
+
+    /*Cabeçalho*/
+
+      .menu-toggle, .btn-contato{
+        display: none;
+      }
+}
